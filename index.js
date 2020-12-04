@@ -1,3 +1,4 @@
+const { getByAbbreviation, searchByName } = require('./db');
 const db = require('./db');
 
 function main() {
@@ -12,13 +13,13 @@ function main() {
     
     const statesWithAHouston = db.statesWithCity('houston');
     console.log('\n\nThere is a Houston in these states:')
-    for (let st of statesWithAnAtlanta) {
+    for (let st of statesWithAHouston) {
         console.log(st);
     }
     
     console.log('\n\n============================');
 
-    const statesWithATampa = statesWithCity('tampa');
+    const statesWithATampa = db.statesWithCity('tampa');
     console.log('\n\nThere is a Tampa in these states:')
     for (st of statesWithATampa) {
         console.log(st);
@@ -26,4 +27,6 @@ function main() {
 
 }
 
-// main();
+console.log(searchByName('dakota'))
+
+main();
