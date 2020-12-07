@@ -13,7 +13,7 @@ const namesAndCities = stateArray.reduce((obj, state) => {
 
 function getByAbbreviation(abbr) {
     abbr = upper(abbr)
-    return states[abbr].name;
+    return states[abbr];
 }
 
 function searchByName(searchTerm) {
